@@ -12,6 +12,7 @@
 bin/
 gen/
 out/
+.DS_Store
 
 # Gradle files
 .gradle/
@@ -35,6 +36,12 @@ captures/
 # Intellij
 *.iml
 .idea/workspace.xml
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/runConfigurations.xml
 
 # Keystore files
 *.jks
