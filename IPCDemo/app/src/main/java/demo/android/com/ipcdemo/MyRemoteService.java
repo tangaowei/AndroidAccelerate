@@ -14,7 +14,7 @@ public class MyRemoteService extends Service {
     private final MySimpleMath.Stub mMyBinder = new MySimpleMath.Stub() {
         @Override
         public int add(int a, int b) throws RemoteException {
-            Log.d(MainActivity.TAG, "MyRemoteService add");
+            Log.d(MainActivity.TAG, "step 4: call MyRemoteService.add(), process: " + IPCUtils.getCurrentProcessName());
             return a + b;
         }
 

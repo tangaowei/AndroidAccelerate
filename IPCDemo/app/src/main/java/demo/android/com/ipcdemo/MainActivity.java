@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static final String TAG = "IPCTest";
 
     ISimpleMath mService;
-    MySimpleMath mMyService;
+    MySimpleMath mMyService; // proxy
 
     private ServiceConnection mMyConnection = new ServiceConnection() {
         @Override
@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void aidl_add() {
         try {
             int result = mService.add(1, 2);
-            Log.d(TAG, "aidl 1 + 2 result: " + result);
         } catch(RemoteException e) {
             Log.d(TAG, "aidl remoteException: " + e.getMessage());
         } catch(Exception e) {
@@ -85,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void aidl_subtract() {
         try {
             int result = mService.subtract(1, 2);
-            Log.d(TAG, "aidl 1 -2 result: " + result);
         } catch(RemoteException e) {
             Log.d(TAG, "aidl remoteException: " + e.getMessage());
         } catch(Exception e) {
@@ -95,8 +93,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void my_add() {
         try {
+            Log.d(TAG, "step 1: call mMyService.add(), process: " + IPCUtils.getCurrentProcessName());
             int result = mMyService.add(1, 2);
-            Log.d(TAG, "1 + 2 result: " + result);
+            Log.d(TAG, "step 5: 1 + 2 result: " + result + ", process: " + IPCUtils.getCurrentProcessName());
         } catch(RemoteException e) {
             Log.d(TAG, "remoteException: " + e.getMessage());
         } catch(Exception e) {
@@ -107,7 +106,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void my_subtract() {
         try {
             int result = mMyService.subtract(1, 2);
-            Log.d(TAG, "1 -2 result: " + result);
         } catch(RemoteException e) {
             Log.d(TAG, "remoteException: " + e.getMessage());
         } catch(Exception e) {

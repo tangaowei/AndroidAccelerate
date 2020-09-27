@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidAccelerate-IPCDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidAccelerate-IPCDemo.iml" group="IPCDemo" />
       <module fileurl="file://$PROJECT_DIR$/IPCDemo.iml" filepath="$PROJECT_DIR$/IPCDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/IPCDemo-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/IPCDemo-app.iml" group="IPCDemo/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

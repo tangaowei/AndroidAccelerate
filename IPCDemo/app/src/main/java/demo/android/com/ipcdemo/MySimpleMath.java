@@ -27,7 +27,7 @@ public interface MySimpleMath extends IInterface {
         }
 
         public static MySimpleMath asInterface(IBinder obj) {
-            Log.d(TAG, "asInterface Obj: " + obj);
+            Log.d(TAG, "step 0: call MySimpleMath.asInterface Obj: " + obj + ", processname: " + IPCUtils.getCurrentProcessName());
             if (obj == null) {
                 return null;
             }
@@ -45,7 +45,7 @@ public interface MySimpleMath extends IInterface {
 
         @Override
         public boolean onTransact(int code, Parcel data, Parcel reply, int flags) throws RemoteException {
-            Log.d(TAG, "onTransact code: " + code);
+            Log.d(TAG, "step 3: call Stub.onTransact(), code: " + code + ", process: " + IPCUtils.getCurrentProcessName());
             switch(code) {
                 case TRANSACTION_ADD: {
                     data.enforceInterface(DESCRIPTOR);
@@ -86,7 +86,7 @@ public interface MySimpleMath extends IInterface {
 
             @Override
             public int add(int a, int b) throws RemoteException {
-                Log.d(TAG, "proxy add");
+                Log.d(TAG, "step 2: call Proxy.add(), process: " + IPCUtils.getCurrentProcessName());
                 Parcel _data = Parcel.obtain();
                 Parcel _reply = Parcel.obtain();
                 int _result;
