@@ -23,6 +23,7 @@
         <activity android:name=".AboutMeActivity"/>
         <activity android:name=".DiceActivity"/>
         <activity android:name=".ConstraintLayoutActivity"/>
+        <activity android:name=".databinding.ObservableFieldActivity"/>
     </application>
 
 </manifest>

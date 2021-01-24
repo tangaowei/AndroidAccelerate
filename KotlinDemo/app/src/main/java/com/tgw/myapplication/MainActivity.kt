@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.tgw.myapplication.databinding.ObservableFieldActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,11 @@ class MainActivity : AppCompatActivity() {
         val constraintButton = findViewById<Button>(R.id.constraint_button)
         constraintButton.setOnClickListener{
             startActivity(Intent(this@MainActivity, ConstraintLayoutActivity::class.java))
+        }
+
+        val observableButton = findViewById<Button>(R.id.observable_fields)
+        observableButton.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ObservableFieldActivity::class.java))
         }
     }
 }
