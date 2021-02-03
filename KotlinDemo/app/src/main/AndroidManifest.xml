@@ -24,6 +24,7 @@
         <activity android:name=".DiceActivity"/>
         <activity android:name=".ConstraintLayoutActivity"/>
         <activity android:name=".databinding.ObservableFieldActivity"/>
+        <activity android:name=".databinding.ViewModelActivity"/>
     </application>
 
 </manifest>

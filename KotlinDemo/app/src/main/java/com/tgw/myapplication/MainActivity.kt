@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModel
 import com.tgw.myapplication.databinding.ObservableFieldActivity
+import com.tgw.myapplication.databinding.ViewModelActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,6 +35,11 @@ class MainActivity : AppCompatActivity() {
         val observableButton = findViewById<Button>(R.id.observable_fields)
         observableButton.setOnClickListener {
             startActivity(Intent(this@MainActivity, ObservableFieldActivity::class.java))
+        }
+
+        val liveDataButton = findViewById<Button>(R.id.livedata_fields)
+        liveDataButton.setOnClickListener {
+            startActivity(Intent(this@MainActivity, ViewModelActivity::class.java))
         }
     }
 }
