@@ -28,6 +28,8 @@
 
         <activity android:name=".SingleInstanceActivity"
             android:launchMode="singleInstance"/>
+
+        <activity android:name=".ForResultActivity"/>
     </application>
 
 </manifest>

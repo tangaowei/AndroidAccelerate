@@ -23,6 +23,34 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "----onStart----");
+        Log.d(TAG, "onStart " + getClass().getName() + ", taskId: " + getTaskId() + ", hashCode: " + hashCode());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "----onResume----");
+        Log.d(TAG, "onResume " + getClass().getName() + ", taskId: " + getTaskId() + ", hashCode: " + hashCode());
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "----onPause----");
+        Log.d(TAG, "onPause " + getClass().getName() + ", taskId: " + getTaskId() + ", hashCode: " + hashCode());
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "----onStop----");
+        Log.d(TAG, "onStop " + getClass().getName() + ", taskId: " + getTaskId() + ", hashCode: " + hashCode());
+    }
+
+    @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         Log.d(TAG, "----onNewIntent----");
