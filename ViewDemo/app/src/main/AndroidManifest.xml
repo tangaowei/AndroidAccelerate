@@ -26,6 +26,9 @@
 
         <activity android:name=".dialog.DialogActivity"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".recyclerview.RecyclerViewActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
