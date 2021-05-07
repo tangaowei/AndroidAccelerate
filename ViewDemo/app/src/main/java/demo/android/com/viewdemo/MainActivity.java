@@ -9,6 +9,7 @@ import demo.android.com.viewdemo.databinding.ActivityMainBinding;
 import demo.android.com.viewdemo.dialog.DialogActivity;
 import demo.android.com.viewdemo.flowexample.FlowActivity;
 import demo.android.com.viewdemo.recyclerview.RecyclerViewActivity;
+import demo.android.com.viewdemo.surfaceviewdemo.MySurfaceViewActivity;
 import demo.android.com.viewdemo.touchexample.TouchExampleActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(i);
+            }
+        });
+
+        binding.surfaceView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, MySurfaceViewActivity.class);
                 startActivity(i);
             }
         });
