@@ -38,6 +38,7 @@ public class RecyclerViewActivity extends AppCompatActivity  {
         mAdapter = new CustomAdapter(mDataset);
         mRecyclerView.setAdapter(mAdapter);
 
+//        mRecyclerView.getRecycledViewPool().setMaxRecycledViews();
         mLayoutManager = new LinearLayoutManager(this);
 
         mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;

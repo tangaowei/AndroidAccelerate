@@ -32,6 +32,9 @@
 
         <activity android:name=".surfaceviewdemo.MySurfaceViewActivity"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".opengles.FirstOpenGLProjectActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
