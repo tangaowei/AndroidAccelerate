@@ -4,13 +4,18 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url uri('/Users/tangaowei/Documents/repos')}
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.1"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+        //格式为-->group:module:version
+        classpath 'com.hc.plugin:lib-plugin:1.0.0'
     }
 }
 

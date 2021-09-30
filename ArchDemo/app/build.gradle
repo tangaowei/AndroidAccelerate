@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.jakewharton.hugo'
+    id 'com.hc.plugin'
 }
 
 android {

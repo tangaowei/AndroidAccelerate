@@ -1,2 +1,3 @@
+include ':lib-plugin'
 include ':app'
 rootProject.name = "Android Arch Demo"
